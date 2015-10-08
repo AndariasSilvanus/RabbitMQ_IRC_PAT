@@ -24,15 +24,19 @@ public class EmitLog {
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
 
-        channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
-
+//        channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
+        channel.exchangeDeclare(EXCHANGE_NAME, "topic");
+        
         Scanner input = new Scanner(System.in);
 //        String message = getMessage(argv);
         String message = "";
+        String routingKey = "rabbit";
 
+        System.out.println(" [*] Please type for send message");
         while (!message.equals("exit")) {
             message = input.nextLine();
-            channel.basicPublish(EXCHANGE_NAME, "", null, message.getBytes("UTF-8"));
+//            channel.basicPublish(EXCHANGE_NAME, "", null, message.getBytes("UTF-8"));   // Fanout
+            channel.basicPublish(EXCHANGE_NAME, routingKey, null, message.getBytes());  // Topic
             System.out.println(" [x] Sent '" + message + "'");
         }
 

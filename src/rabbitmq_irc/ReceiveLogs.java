@@ -22,9 +22,13 @@ public class ReceiveLogs {
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
 
-        channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
+//        channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
+        channel.exchangeDeclare(EXCHANGE_NAME, "topic");
+
         String queueName = channel.queueDeclare().getQueue();
-        channel.queueBind(queueName, EXCHANGE_NAME, "");
+//        channel.queueBind(queueName, EXCHANGE_NAME, "");
+        String bindingKey = "rabbit";
+        channel.queueBind(queueName, EXCHANGE_NAME, bindingKey);
 
         System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 
