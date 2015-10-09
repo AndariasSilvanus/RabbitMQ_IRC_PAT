@@ -6,8 +6,8 @@
             <file>file:/E:/Work/Netbeans/Project/RabbitMQ_IRC_PAT/src/rabbitmq_irc/Send.java</file>
             <file>file:/E:/Work/Netbeans/Project/RabbitMQ_IRC_PAT/src/rabbitmq_irc/Recv.java</file>
             <file>file:/E:/Work/Netbeans/Project/RabbitMQ_IRC_PAT/src/rabbitmq_irc/RabbitMQ_IRC.java</file>
-            <file>file:/E:/Work/Netbeans/Project/RabbitMQ_IRC_PAT/src/rabbitmq_irc/Client_Send.java</file>
             <file>file:/E:/Work/Netbeans/Project/RabbitMQ_IRC_PAT/src/rabbitmq_irc/Client_Recv.java</file>
+            <file>file:/E:/Work/Netbeans/Project/RabbitMQ_IRC_PAT/src/rabbitmq_irc/Client_SendRecv.java</file>
             <file>file:/E:/Work/Netbeans/Project/RabbitMQ_IRC_PAT/src/rabbitmq_irc/ReceiveLogs.java</file>
             <file>file:/E:/Work/Netbeans/Project/RabbitMQ_IRC_PAT/src/rabbitmq_irc/Client.java</file>
             <file>file:/E:/Work/Netbeans/Project/RabbitMQ_IRC_PAT/src/rabbitmq_irc/EmitLog.java</file>
